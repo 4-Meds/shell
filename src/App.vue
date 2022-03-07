@@ -1,9 +1,14 @@
 <template>
-  <h1>Works</h1>
+  <ShellNavbar/>
 </template>
 
 <script>
+import ShellNavbar from './components/ShellNavbar.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    ShellNavbar
+  }
 }
 </script>
