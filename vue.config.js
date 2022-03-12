@@ -9,6 +9,7 @@ module.exports = defineConfig({
       new ModuleFederationPlugin({
         name: 'shell',
         filename: 'remoteEntry.js',
+        // FIXME: Replace with registry
         remotes: {
           patients: 'patients@http://localhost:8001/remoteEntry.js'
         },
@@ -19,5 +20,8 @@ module.exports = defineConfig({
   chainWebpack: config => {
     // See https://github.com/vuejs/vue-cli/issues/6318
     config.optimization.delete('splitChunks')
+  },
+  devServer: {
+    historyApiFallback: true
   }
 })

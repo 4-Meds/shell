@@ -1,5 +1,8 @@
 <template>
-  <ShellNavbar/>
+  <div id="shell">
+    <shell-navbar/>
+    <router-view/>
+  </div>
 </template>
 
 <script>
